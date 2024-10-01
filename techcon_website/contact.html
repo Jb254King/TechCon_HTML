@@ -4,8 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - TechCon 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .social-media {
+            margin: 10px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <h1>Contact Us</h1>
         <nav>
@@ -19,38 +92,42 @@
     </header>
 
     <main>
-        <section id="contact-info">
-            <h2>Contact Information</h2>
-            <p>Email: <a href="mailto:info@techcon2024.com">info@techcon2024.com</a></p>
-            <p>Social Media:
-                <a href="https://www.facebook.com/techcon2024" target="_blank">Facebook</a>,
-                <a href="https://twitter.com/techcon2024" target="_blank">Twitter</a>,
-                <a href="https://www.linkedin.com/company/techcon2024" target="_blank">LinkedIn</a>
-            </p>
-            <div id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.876921208099!2d-0.12769228422074937!3d51.50769448233396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604e62c2a891f%3A0x52963a5addd52a99!2sBig%20Ben!5e0!3m2!1sen!2suk!4v1624471028334!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <a href="https://twitter.com/TechCon" target="_blank">Twitter</a> |
+                <a href="https://facebook.com/TechCon" target="_blank">Facebook</a> |
+                <a href="https://linkedin.com/company/TechCon" target="_blank">LinkedIn</a>
             </div>
-        </section>
+        </div>
 
-        <section id="contact-form">
-            <h2>Contact Us Form</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+        <h2>Our Location</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.6371933515034!2d-122.41941548468114!3d37.77492927975959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c9e1c3b8b%3A0x4b4a156b0848de20!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1641408107834!5m2!1sen!2sus" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+        <h2>Contact Us Form</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
     </main>
 
     <footer>
-        <p> &copy; Copyright 2024 TechCon</p>
+        <p>&copy; 2024 TechCon. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
